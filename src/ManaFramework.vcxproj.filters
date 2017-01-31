@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="App\window.h">
+      <Filter>Core\App</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Concurrent\thread_helper.h">
+      <Filter>Core\Concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="Concurrent\worker.h">
+      <Filter>Core\Concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\util_fun.h">
+      <Filter>Core\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\easily_obj_pool.h">
+      <Filter>Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Concurrent\lock_helper.h">
+      <Filter>Core\Concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="File\path.h">
+      <Filter>Core\File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\file.h">
+      <Filter>Core\File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\archive.h">
+      <Filter>Core\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\util_macro.h">
+      <Filter>Core\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\util_memory.h">
+      <Filter>Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="App\system_caps.h">
+      <Filter>Core\App</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\logger.h">
+      <Filter>Core\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\logger_console.h">
+      <Filter>Core\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\mouse.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer\elapsed_timer.h">
+      <Filter>Core\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="App\app_initializer.h">
+      <Filter>Core\App</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\di_driver.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\di_joystick.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\di_keyboard.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\sound_util.h">
+      <Filter>Core\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\id_manger.h">
+      <Filter>Core\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\renderer_2d_cmd.h">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\renderer_2d_util.h">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\d3d9_driver.h">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\draw_caps.h">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\renderer_text.h">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\renderer_sprite_queue.h">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\renderer_2d_async.h">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\d3d9_renderer_2d.h">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\d3d9_texture_manager.h">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\renderer_2d.h">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\renderer_2d_sync.h">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Concurrent\sync_queue.h">
+      <Filter>Core\Concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\ds_driver.h">
+      <Filter>Core\Sound\ds_sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\ds_sound.h">
+      <Filter>Core\Sound\ds_sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\ds_sound_player.h">
+      <Filter>Core\Sound\ds_sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\sound_file_reader.h">
+      <Filter>Core\Sound\ds_sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\sound_player_async.h">
+      <Filter>Core\Sound\sound_player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\sound_player.h">
+      <Filter>Core\Sound\sound_player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\sound_player_cmd.h">
+      <Filter>Core\Sound\sound_player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\sound_player_sync.h">
+      <Filter>Core\Sound\sound_player</Filter>
+    </ClInclude>
+    <ClInclude Include="Concurrent\worker_lockfree.h">
+      <Filter>Core\Concurrent</Filter>
+    </ClInclude>
+    <ClInclude Include="mana_common.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="GameApp\game_window.h">
+      <Filter>Framework\GameApp</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer\fps_timer.h">
+      <Filter>Core\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\sprite.h">
+      <Filter>Framework\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\keyframe.h">
+      <Filter>Framework\Graphic\MovieClip</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\movieclip.h">
+      <Filter>Framework\Graphic\MovieClip</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\timeline.h">
+      <Filter>Framework\Graphic\MovieClip</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\graphic_fun.h">
+      <Filter>Framework\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\audio.h">
+      <Filter>Framework\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\audio_context.h">
+      <Filter>Framework\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\node.h">
+      <Filter>Core\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\draw_builder.h">
+      <Filter>Framework\Graphic\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\draw_data.h">
+      <Filter>Framework\Graphic\Builder</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\draw_util.h">
+      <Filter>Framework\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\audio_util.h">
+      <Filter>Framework\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\audio_player.h">
+      <Filter>Framework\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\audio_frame.h">
+      <Filter>Framework\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\actor.h">
+      <Filter>Framework\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\actor_context.h">
+      <Filter>Framework\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\actor_machine.h">
+      <Filter>Framework\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\resource_manager.h">
+      <Filter>Framework\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\resource_file.h">
+      <Filter>Framework\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\xtal_manager.h">
+      <Filter>Framework\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\xtal_code.h">
+      <Filter>Framework\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\xtal_lib.h">
+      <Filter>Framework\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\text_data.h">
+      <Filter>Core\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\string_fw.h">
+      <Filter>Core\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\label.h">
+      <Filter>Framework\Graphic\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\message.h">
+      <Filter>Framework\Graphic\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\text_table.h">
+      <Filter>Framework\Graphic\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\draw_base.h">
+      <Filter>Framework\Graphic\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\draw_context.h">
+      <Filter>Framework\Graphic\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\draw_state.h">
+      <Filter>Framework\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic\polygon.h">
+      <Filter>Framework\Graphic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{18c082d2-ee54-4b47-a3ae-79ab0377259d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\App">
+      <UniqueIdentifier>{46a7da6e-76a7-4199-a44b-67063d1b3d1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Concurrent">
+      <UniqueIdentifier>{b634e4f4-fa00-4a56-a333-6b6161aa768a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Debug">
+      <UniqueIdentifier>{5d8877b3-baa7-40d0-b91d-daf8f47d00a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Draw">
+      <UniqueIdentifier>{7859b9fe-bcdc-4f6c-a5f4-577021d611bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Draw\renderer_2d">
+      <UniqueIdentifier>{6bba5899-c88d-453f-a478-9b41af5876ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Draw\d3d9">
+      <UniqueIdentifier>{444aafb7-ac12-4912-aa5a-09f80d073194}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\File">
+      <UniqueIdentifier>{35f814b7-a947-47d4-883f-03b48b4c4504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Input">
+      <UniqueIdentifier>{d06f306d-a74b-4fd5-b8f5-bce00764626f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Sound">
+      <UniqueIdentifier>{425697ca-67c5-4fca-abeb-7db1ff6e9e80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Sound\ds_sound">
+      <UniqueIdentifier>{84a85450-2596-4d4d-b5b8-7fbc8410016b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Sound\sound_player">
+      <UniqueIdentifier>{263e2ec5-2d70-460a-9bf2-025795fe5e68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Timer">
+      <UniqueIdentifier>{0ab5fbd3-5c96-4058-a59f-819f0857e3bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utility">
+      <UniqueIdentifier>{2853d05b-6eed-41f3-b3e9-67e5204958ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{e3185fd1-661e-4c0f-a501-a068844fa5a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Audio">
+      <UniqueIdentifier>{abcdd8c2-7133-4029-997c-5ed54920972d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\GameApp">
+      <UniqueIdentifier>{56cec1ae-2b42-4737-8086-a86500f64a21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Graphic">
+      <UniqueIdentifier>{6beb718a-88ac-4435-8175-0131e13e229b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Graphic\Builder">
+      <UniqueIdentifier>{9b68d8f5-2b19-4324-977f-b32fd3c669b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Graphic\MovieClip">
+      <UniqueIdentifier>{15d3d9bb-2c5c-4b48-b778-94b840e445e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Actor">
+      <UniqueIdentifier>{76c203ce-bc37-45e9-a891-8c632b829c16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Resource">
+      <UniqueIdentifier>{2c2de344-3b77-431e-bcef-9175bd8ad3aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Script">
+      <UniqueIdentifier>{ed1f8eaf-3138-4233-b641-9f28bc2c5260}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Memory">
+      <UniqueIdentifier>{f0ade852-f32b-4227-a877-d12c413f4006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Graphic\Text">
+      <UniqueIdentifier>{6fd2cfb0-528a-46bb-ab99-5d1989b97ec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Graphic\Base">
+      <UniqueIdentifier>{291158f0-5b1c-44d1-9147-c5af1faa7364}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App\window.cpp">
+      <Filter>Core\App</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Concurrent\worker.cpp">
+      <Filter>Core\Concurrent</Filter>
+    </ClCompile>
+    <ClCompile Include="File\path.cpp">
+      <Filter>Core\File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\file.cpp">
+      <Filter>Core\File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\archive.cpp">
+      <Filter>Core\File</Filter>
+    </ClCompile>
+    <ClCompile Include="App\system_caps.cpp">
+      <Filter>Core\App</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\logger.cpp">
+      <Filter>Core\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\mouse.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="App\app_initializer.cpp">
+      <Filter>Core\App</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\di_driver.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\di_joystick.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\di_keyboard.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\renderer_2d_cmd.cpp">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\renderer_2d_util.cpp">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\d3d9_driver.cpp">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\draw_caps.cpp">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\renderer_text.cpp">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\renderer_sprite_queue.cpp">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\renderer_2d_async.cpp">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\d3d9_renderer_2d_init.cpp">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\d3d9_renderer_2d_render.cpp">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\d3d9_renderer_2d_request.cpp">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\d3d9_texture_manager.cpp">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\renderer_2d_sync.cpp">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\ds_driver.cpp">
+      <Filter>Core\Sound\ds_sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\ds_sound.cpp">
+      <Filter>Core\Sound\ds_sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\ds_sound_player.cpp">
+      <Filter>Core\Sound\ds_sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\sound_file_reader.cpp">
+      <Filter>Core\Sound\ds_sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\sound_player_cmd.cpp">
+      <Filter>Core\Sound\sound_player</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\sound_player_async.cpp">
+      <Filter>Core\Sound\sound_player</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\sound_player_sync.cpp">
+      <Filter>Core\Sound\sound_player</Filter>
+    </ClCompile>
+    <ClCompile Include="Concurrent\worker_lockfree.cpp">
+      <Filter>Core\Concurrent</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\renderer_2d.cpp">
+      <Filter>Core\Draw\renderer_2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\sound_player.cpp">
+      <Filter>Core\Sound\sound_player</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\d3d9_renderer_2d_device.cpp">
+      <Filter>Core\Draw\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="GameApp\game_window.cpp">
+      <Filter>Framework\GameApp</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer\fps_timer.cpp">
+      <Filter>Core\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\sprite.cpp">
+      <Filter>Framework\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\keyframe.cpp">
+      <Filter>Framework\Graphic\MovieClip</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\movieclip.cpp">
+      <Filter>Framework\Graphic\MovieClip</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\timeline.cpp">
+      <Filter>Framework\Graphic\MovieClip</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\audio.cpp">
+      <Filter>Framework\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\audio_context.cpp">
+      <Filter>Framework\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\draw_builder.cpp">
+      <Filter>Framework\Graphic\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\draw_builder_load.cpp">
+      <Filter>Framework\Graphic\Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\audio_player.cpp">
+      <Filter>Framework\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\audio_frame.cpp">
+      <Filter>Framework\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\actor.cpp">
+      <Filter>Framework\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\actor_context.cpp">
+      <Filter>Framework\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\actor_machine.cpp">
+      <Filter>Framework\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\resource_manager.cpp">
+      <Filter>Framework\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\resource_file.cpp">
+      <Filter>Framework\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\xtal_manager.cpp">
+      <Filter>Framework\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\xtal_code.cpp">
+      <Filter>Framework\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\xtal_lib.cpp">
+      <Filter>Framework\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\label.cpp">
+      <Filter>Framework\Graphic\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\message.cpp">
+      <Filter>Framework\Graphic\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\text_table.cpp">
+      <Filter>Framework\Graphic\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\draw_base.cpp">
+      <Filter>Framework\Graphic\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\draw_context.cpp">
+      <Filter>Framework\Graphic\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\draw_state.cpp">
+      <Filter>Framework\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic\polygon.cpp">
+      <Filter>Framework\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\xtal_bind.cpp">
+      <Filter>Framework\Script</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug\logger_files.inl">
+      <Filter>Core\Debug</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Draw\d3d9_renderer_2d.hlsl">
+      <Filter>Core\Draw\d3d9</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

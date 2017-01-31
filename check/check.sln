@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ManaFramework", "..\src\ManaFramework.vcxproj", "{2EB4AF3D-DF78-4973-872F-817E6D7700E2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "check", "check.vcxproj", "{A47D87F4-C0F7-4D05-8361-A6245AA8330A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2EB4AF3D-DF78-4973-872F-817E6D7700E2} = {2EB4AF3D-DF78-4973-872F-817E6D7700E2}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Develop|Win32 = Develop|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EB4AF3D-DF78-4973-872F-817E6D7700E2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2EB4AF3D-DF78-4973-872F-817E6D7700E2}.Debug|Win32.Build.0 = Debug|Win32
+		{2EB4AF3D-DF78-4973-872F-817E6D7700E2}.Develop|Win32.ActiveCfg = Develop|Win32
+		{2EB4AF3D-DF78-4973-872F-817E6D7700E2}.Develop|Win32.Build.0 = Develop|Win32
+		{2EB4AF3D-DF78-4973-872F-817E6D7700E2}.Release|Win32.ActiveCfg = Release|Win32
+		{2EB4AF3D-DF78-4973-872F-817E6D7700E2}.Release|Win32.Build.0 = Release|Win32
+		{A47D87F4-C0F7-4D05-8361-A6245AA8330A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A47D87F4-C0F7-4D05-8361-A6245AA8330A}.Debug|Win32.Build.0 = Debug|Win32
+		{A47D87F4-C0F7-4D05-8361-A6245AA8330A}.Develop|Win32.ActiveCfg = Develop|Win32
+		{A47D87F4-C0F7-4D05-8361-A6245AA8330A}.Develop|Win32.Build.0 = Develop|Win32
+		{A47D87F4-C0F7-4D05-8361-A6245AA8330A}.Release|Win32.ActiveCfg = Release|Win32
+		{A47D87F4-C0F7-4D05-8361-A6245AA8330A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Develop|Win32">
+      <Configuration>Develop</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2EB4AF3D-DF78-4973-872F-817E6D7700E2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ManaFramework</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\lib\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\lib\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\lib\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_dev</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;ZLIB_WINAPI;INITGUID;_WINDOWS;MANA_DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\Include;..\..\boost\1_56_0\lib\include;..\..\Xtal\r483\src\xtal;..\..\zlib\1.2.7;..\..\libogg\1.3.1\include;..\..\libvorbis\1.3.3\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/Zm250 %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4530</DisableSpecificWarnings>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\boost\boost_1_52_0\lib\lib;..\Xtal\r476\lib</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)_d.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dsound.lib;xtallib_d.lib;zlibstat_d.lib;libogg_static_d.lib;libvorbis_static_d.lib;libvorbisfile_static_d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86;..\..\boost\1_56_0\lib\lib;..\..\Xtal\r483\lib;..\..\zlib\1.2.7\contrib\vstudio\vc12\x86\ZlibStatDebug;..\..\libogg\1.3.1\win32\VS2013\Win32\Debug;..\..\libvorbis\1.3.3\win32\VS2013\Win32\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <FxCompile>
+      <ObjectFileOutput>$(OutDir)%(Filename)_d.fxc</ObjectFileOutput>
+      <EntryPointName />
+      <ShaderModel>2.0</ShaderModel>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)d3d9_renderer_2d_d.fxc ..\check\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;ZLIB_WINAPI;INITGUID;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\Include;..\..\boost\1_56_0\lib\include;..\..\Xtal\r483\src\xtal;..\..\zlib\1.2.7;..\..\libogg\1.3.1\include;..\..\libvorbis\1.3.3\include</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>
+      </EnableEnhancedInstructionSet>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions>/Zm250 %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4530</DisableSpecificWarnings>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\boost\boost_1_52_0\lib\lib;..\Xtal\r476\lib</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86;..\..\boost\1_56_0\lib\lib;..\..\Xtal\r483\lib;..\..\zlib\1.2.7\contrib\vstudio\vc12\x86\ZlibStatRelease;..\..\libogg\1.3.1\win32\VS2013\Win32\Release;..\..\libvorbis\1.3.3\win32\VS2013\Win32\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dsound.lib;xtallib.lib;zlibstat.lib;libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib</AdditionalDependencies>
+    </Lib>
+    <FxCompile>
+      <EntryPointName />
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>2.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)%(Filename).fxc</ObjectFileOutput>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)d3d9_renderer_2d.fxc ..\check\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;ZLIB_WINAPI;INITGUID;_WINDOWS;MANA_DEBUG;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\Include;..\..\boost\1_56_0\lib\include;..\..\Xtal\r483\src\xtal;..\..\zlib\1.2.7;..\..\libogg\1.3.1\include;..\..\libvorbis\1.3.3\include</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>
+      </EnableEnhancedInstructionSet>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions>/Zm250 %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4530</DisableSpecificWarnings>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\boost\boost_1_52_0\lib\lib;..\Xtal\r476\lib</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86;..\..\boost\1_56_0\lib\lib;..\..\Xtal\r483\lib;..\..\zlib\1.2.7\contrib\vstudio\vc12\x86\ZlibStatDevelop;..\..\libogg\1.3.1\win32\VS2013\Win32\Develop;..\..\libvorbis\1.3.3\win32\VS2013\Win32\Develop;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dsound.lib;xtallib_dev.lib;zlibstat_dev.lib;libogg_static_dev.lib;libvorbis_static_dev.lib;libvorbisfile_static_dev.lib</AdditionalDependencies>
+    </Lib>
+    <FxCompile>
+      <EntryPointName>
+      </EntryPointName>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>2.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)%(Filename).fxc</ObjectFileOutput>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)d3d9_renderer_2d.fxc ..\check\bin</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Actor\actor.h" />
+    <ClInclude Include="Actor\actor_context.h" />
+    <ClInclude Include="Actor\actor_machine.h" />
+    <ClInclude Include="App\app_initializer.h" />
+    <ClInclude Include="App\system_caps.h" />
+    <ClInclude Include="App\window.h" />
+    <ClInclude Include="Audio\audio.h" />
+    <ClInclude Include="Audio\audio_context.h" />
+    <ClInclude Include="Audio\audio_player.h" />
+    <ClInclude Include="Audio\audio_util.h" />
+    <ClInclude Include="Concurrent\lock_helper.h" />
+    <ClInclude Include="Concurrent\sync_queue.h" />
+    <ClInclude Include="Concurrent\thread_helper.h" />
+    <ClInclude Include="Concurrent\worker.h" />
+    <ClInclude Include="Concurrent\worker_lockfree.h" />
+    <ClInclude Include="Debug\logger.h" />
+    <ClInclude Include="Draw\d3d9_driver.h" />
+    <ClInclude Include="Draw\d3d9_renderer_2d.h" />
+    <ClInclude Include="Draw\draw_caps.h" />
+    <ClInclude Include="Draw\d3d9_texture_manager.h" />
+    <ClInclude Include="Draw\renderer_2d.h" />
+    <ClInclude Include="Draw\renderer_2d_async.h" />
+    <ClInclude Include="Draw\renderer_2d_cmd.h" />
+    <ClInclude Include="Draw\renderer_2d_sync.h" />
+    <ClInclude Include="Draw\renderer_2d_util.h" />
+    <ClInclude Include="Draw\renderer_sprite_queue.h" />
+    <ClInclude Include="Draw\renderer_text.h" />
+    <ClInclude Include="Draw\text_data.h" />
+    <ClInclude Include="File\archive.h" />
+    <ClInclude Include="File\file.h" />
+    <ClInclude Include="File\path.h" />
+    <ClInclude Include="GameApp\game_window.h" />
+    <ClInclude Include="Graphic\audio_frame.h" />
+    <ClInclude Include="Graphic\draw_base.h" />
+    <ClInclude Include="Graphic\draw_builder.h" />
+    <ClInclude Include="Graphic\draw_context.h" />
+    <ClInclude Include="Graphic\draw_data.h" />
+    <ClInclude Include="Graphic\draw_state.h" />
+    <ClInclude Include="Graphic\draw_util.h" />
+    <ClInclude Include="Graphic\graphic_fun.h" />
+    <ClInclude Include="Graphic\keyframe.h" />
+    <ClInclude Include="Graphic\label.h" />
+    <ClInclude Include="Graphic\message.h" />
+    <ClInclude Include="Graphic\movieclip.h" />
+    <ClInclude Include="Graphic\polygon.h" />
+    <ClInclude Include="Graphic\sprite.h" />
+    <ClInclude Include="Graphic\text_table.h" />
+    <ClInclude Include="Graphic\timeline.h" />
+    <ClInclude Include="Input\di_driver.h" />
+    <ClInclude Include="Input\di_joystick.h" />
+    <ClInclude Include="Input\di_keyboard.h" />
+    <ClInclude Include="Input\mouse.h" />
+    <ClInclude Include="mana_common.h" />
+    <ClInclude Include="Memory\easily_obj_pool.h" />
+    <ClInclude Include="Memory\util_memory.h" />
+    <ClInclude Include="Resource\resource_file.h" />
+    <ClInclude Include="Resource\resource_manager.h" />
+    <ClInclude Include="Script\xtal_code.h" />
+    <ClInclude Include="Script\xtal_lib.h" />
+    <ClInclude Include="Script\xtal_manager.h" />
+    <ClInclude Include="Sound\ds_driver.h" />
+    <ClInclude Include="Sound\ds_sound.h" />
+    <ClInclude Include="Sound\ds_sound_player.h" />
+    <ClInclude Include="Sound\sound_file_reader.h" />
+    <ClInclude Include="Sound\sound_player.h" />
+    <ClInclude Include="Sound\sound_player_async.h" />
+    <ClInclude Include="Sound\sound_player_cmd.h" />
+    <ClInclude Include="Sound\sound_player_sync.h" />
+    <ClInclude Include="Sound\sound_util.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Timer\elapsed_timer.h" />
+    <ClInclude Include="Timer\fps_timer.h" />
+    <ClInclude Include="Utility\id_manger.h" />
+    <ClInclude Include="Utility\node.h" />
+    <ClInclude Include="Utility\string_fw.h" />
+    <ClInclude Include="Utility\util_fun.h" />
+    <ClInclude Include="Utility\util_macro.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Actor\actor.cpp" />
+    <ClCompile Include="Actor\actor_context.cpp" />
+    <ClCompile Include="Actor\actor_machine.cpp" />
+    <ClCompile Include="App\app_initializer.cpp" />
+    <ClCompile Include="App\system_caps.cpp" />
+    <ClCompile Include="App\window.cpp" />
+    <ClCompile Include="Audio\audio.cpp" />
+    <ClCompile Include="Audio\audio_context.cpp" />
+    <ClCompile Include="Audio\audio_player.cpp" />
+    <ClCompile Include="Concurrent\worker.cpp" />
+    <ClCompile Include="Concurrent\worker_lockfree.cpp" />
+    <ClCompile Include="Debug\logger.cpp" />
+    <ClCompile Include="Graphic\audio_frame.cpp" />
+    <ClCompile Include="Graphic\draw_base.cpp" />
+    <ClCompile Include="Graphic\draw_builder.cpp" />
+    <ClCompile Include="Graphic\draw_builder_load.cpp" />
+    <ClCompile Include="Graphic\draw_context.cpp" />
+    <ClCompile Include="Graphic\draw_state.cpp" />
+    <ClCompile Include="Graphic\keyframe.cpp" />
+    <ClCompile Include="Graphic\label.cpp" />
+    <ClCompile Include="Graphic\message.cpp" />
+    <ClCompile Include="Graphic\movieclip.cpp" />
+    <ClCompile Include="Graphic\polygon.cpp" />
+    <ClCompile Include="Graphic\sprite.cpp" />
+    <ClCompile Include="Graphic\text_table.cpp" />
+    <ClCompile Include="Graphic\timeline.cpp" />
+    <ClCompile Include="Resource\resource_file.cpp" />
+    <ClCompile Include="Resource\resource_manager.cpp" />
+    <ClCompile Include="Script\xtal_bind.cpp" />
+    <ClCompile Include="Script\xtal_code.cpp" />
+    <ClCompile Include="Script\xtal_lib.cpp" />
+    <ClCompile Include="Script\xtal_manager.cpp" />
+    <ClCompile Include="Timer\fps_timer.cpp" />
+    <None Include="Debug\logger_files.inl">
+      <FileType>CppCode</FileType>
+    </None>
+    <ClInclude Include="Debug\logger_console.h" />
+    <ClCompile Include="Draw\d3d9_driver.cpp" />
+    <ClCompile Include="Draw\d3d9_renderer_2d_device.cpp" />
+    <ClCompile Include="Draw\d3d9_renderer_2d_init.cpp" />
+    <ClCompile Include="Draw\d3d9_renderer_2d_render.cpp" />
+    <ClCompile Include="Draw\d3d9_renderer_2d_request.cpp" />
+    <ClCompile Include="Draw\draw_caps.cpp" />
+    <ClCompile Include="Draw\d3d9_texture_manager.cpp" />
+    <ClCompile Include="Draw\renderer_2d.cpp" />
+    <ClCompile Include="Draw\renderer_2d_async.cpp" />
+    <ClCompile Include="Draw\renderer_2d_cmd.cpp" />
+    <ClCompile Include="Draw\renderer_2d_sync.cpp" />
+    <ClCompile Include="Draw\renderer_2d_util.cpp" />
+    <ClCompile Include="Draw\renderer_sprite_queue.cpp" />
+    <ClCompile Include="Draw\renderer_text.cpp" />
+    <ClCompile Include="File\archive.cpp" />
+    <ClCompile Include="File\file.cpp" />
+    <ClCompile Include="File\path.cpp" />
+    <ClCompile Include="GameApp\game_window.cpp" />
+    <ClCompile Include="Input\di_driver.cpp" />
+    <ClCompile Include="Input\di_joystick.cpp" />
+    <ClCompile Include="Input\di_keyboard.cpp" />
+    <ClCompile Include="Input\mouse.cpp" />
+    <ClCompile Include="Sound\ds_driver.cpp" />
+    <ClCompile Include="Sound\ds_sound.cpp" />
+    <ClCompile Include="Sound\ds_sound_player.cpp" />
+    <ClCompile Include="Sound\sound_file_reader.cpp" />
+    <ClCompile Include="Sound\sound_player.cpp" />
+    <ClCompile Include="Sound\sound_player_async.cpp" />
+    <ClCompile Include="Sound\sound_player_cmd.cpp" />
+    <ClCompile Include="Sound\sound_player_sync.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Draw\d3d9_renderer_2d.hlsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
