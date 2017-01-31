@@ -1,7 +1,16 @@
 # ManaGameFramework
 ManaGameFrameworkは、Windowsの2Dゲーム用のライブラリです。  
 
-# 機能  
+# フォルダ構成
+* check
+ * Framworkの動作チェック用のプロジェクト
+* src
+ * ManaGameFrameworkの本体
+ * ビルドするとlibが生成されます
+* tool
+ * ManaGameFrameworkで使うツール群 
+ 
+# 機能  
 ## Window
 * 仮想フルスクリーン対応
  * アスペクト比維持拡大
